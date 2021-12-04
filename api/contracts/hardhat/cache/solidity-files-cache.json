@@ -1,0 +1,1781 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\ABCNFT721.sol": {
+      "lastModificationDate": 1624868206932,
+      "contentHash": "b6518642dc71f8f5b66450f4a3f5e0b4",
+      "sourceName": "solidities/ABCNFT721/ABCNFT721.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165StorageUpgradeable.sol",
+        "./mixins/OZ/ERC721Upgradeable.sol",
+        "./mixins/ABCproTreasuryNode.sol",
+        "./mixins/roles/ABCproAdminRole.sol",
+        "./mixins/HasSecondarySaleFees.sol",
+        "./mixins/NFT721Core.sol",
+        "./mixins/NFT721Market.sol",
+        "./mixins/NFT721Creator.sol",
+        "./mixins/NFT721Metadata.sol",
+        "./mixins/NFT721Mint.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ABCNFT721"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165StorageUpgradeable.sol": {
+      "lastModificationDate": 1624638761310,
+      "contentHash": "f754b6f051f112998908ef67df432475",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165StorageUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC165Upgradeable.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165StorageUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol": {
+      "lastModificationDate": 1626088938206,
+      "contentHash": "b29f8a660fa14797b1ef1a8ff8d4eac0",
+      "sourceName": "solidities/ABCNFT721/mixins/OZ/ERC721Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721MetadataUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721EnumerableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165StorageUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/structs/EnumerableSetUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/structs/EnumerableMapUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721Upgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\ABCproTreasuryNode.sol": {
+      "lastModificationDate": 1625323162031,
+      "contentHash": "de49c9bec727159633d41ec644f55b66",
+      "sourceName": "solidities/ABCNFT721/mixins/ABCproTreasuryNode.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ABCproTreasuryNode"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\roles\\ABCproAdminRole.sol": {
+      "lastModificationDate": 1625323475514,
+      "contentHash": "57abe17e2c9faaf96f5832e280b2d2e5",
+      "sourceName": "solidities/ABCNFT721/mixins/roles/ABCproAdminRole.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/IAdminRole.sol",
+        "../ABCproTreasuryNode.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ABCproAdminRole"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\HasSecondarySaleFees.sol": {
+      "lastModificationDate": 1624651735339,
+      "contentHash": "d84a3315488a2af8dd172ff15b2dbf44",
+      "sourceName": "solidities/ABCNFT721/mixins/HasSecondarySaleFees.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165StorageUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "HasSecondarySaleFees"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\NFT721Core.sol": {
+      "lastModificationDate": 1624649696676,
+      "contentHash": "9531303d34709db0901f6b4cb3300d33",
+      "sourceName": "solidities/ABCNFT721/mixins/NFT721Core.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFT721Core"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\NFT721Market.sol": {
+      "lastModificationDate": 1626081345718,
+      "contentHash": "a745e546ecf53248dab3a7273e9b7cc1",
+      "sourceName": "solidities/ABCNFT721/mixins/NFT721Market.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+        "../interfaces/IABCNFTMarket.sol",
+        "./ABCproTreasuryNode.sol",
+        "./HasSecondarySaleFees.sol",
+        "./NFT721Creator.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFT721Market"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\NFT721Creator.sol": {
+      "lastModificationDate": 1626081804015,
+      "contentHash": "b424157f0ef8baf20ffefb23e98e8b48",
+      "sourceName": "solidities/ABCNFT721/mixins/NFT721Creator.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "./OZ/ERC721Upgradeable.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFT721Creator"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\NFT721Metadata.sol": {
+      "lastModificationDate": 1625323404325,
+      "contentHash": "d8d3b2fdc1dfcd905ee3e87dc918766b",
+      "sourceName": "solidities/ABCNFT721/mixins/NFT721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol",
+        "./NFT721Core.sol",
+        "./NFT721Creator.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFT721Metadata"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\NFT721Mint.sol": {
+      "lastModificationDate": 1626533732615,
+      "contentHash": "2d1152e7c477921211e37950e1cda638",
+      "sourceName": "solidities/ABCNFT721/mixins/NFT721Mint.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./OZ/ERC721Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+        "./NFT721Creator.sol",
+        "./NFT721Market.sol",
+        "./NFT721Metadata.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFT721Mint"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165Upgradeable.sol": {
+      "lastModificationDate": 1624638761318,
+      "contentHash": "3649e7528117ffc7d8a3ccf199b0c6d8",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165Upgradeable.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165Upgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol": {
+      "lastModificationDate": 1624638762385,
+      "contentHash": "76309b022d76aa52bb1830b7bf515e9e",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\introspection\\IERC165Upgradeable.sol": {
+      "lastModificationDate": 1624638761744,
+      "contentHash": "4db71815975139b4bcedb3b615131302",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165Upgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC721\\IERC721Upgradeable.sol": {
+      "lastModificationDate": 1624638762079,
+      "contentHash": "7f302ffe7c4ff4829a36600c92a855a3",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Upgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC721\\extensions\\IERC721MetadataUpgradeable.sol": {
+      "lastModificationDate": 1624638761846,
+      "contentHash": "50b68faa7d4e3658f0bd5212c50d1252",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721MetadataUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721MetadataUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC721\\extensions\\IERC721EnumerableUpgradeable.sol": {
+      "lastModificationDate": 1624638761748,
+      "contentHash": "ebbab00d68655cedbc40acd52bff2716",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721EnumerableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721EnumerableUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\token\\ERC721\\IERC721ReceiverUpgradeable.sol": {
+      "lastModificationDate": 1624638762018,
+      "contentHash": "b4a348a0181901670cd12e18c0d3efa9",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721ReceiverUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\math\\SafeMathUpgradeable.sol": {
+      "lastModificationDate": 1624638762742,
+      "contentHash": "2fc992a5c91f2efe9f662951c02044c9",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMathUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\AddressUpgradeable.sol": {
+      "lastModificationDate": 1624638761164,
+      "contentHash": "b18cf127ca32303bdceafa418ff4eec0",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AddressUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol": {
+      "lastModificationDate": 1624638761188,
+      "contentHash": "5db4a258f3590dd5f09601c755ff7cc5",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\structs\\EnumerableSetUpgradeable.sol": {
+      "lastModificationDate": 1624638761227,
+      "contentHash": "342221227654dbc8cdf85c18f5354cf2",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/structs/EnumerableSetUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableSetUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\structs\\EnumerableMapUpgradeable.sol": {
+      "lastModificationDate": 1624638761224,
+      "contentHash": "c32fe5974353259ead10e047b41bc665",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/structs/EnumerableMapUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./EnumerableSetUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableMapUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\StringsUpgradeable.sol": {
+      "lastModificationDate": 1624638762747,
+      "contentHash": "083c6ad701edaba68ec6481688997099",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "StringsUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\hardhat\\console.sol": {
+      "lastModificationDate": 1622367913482,
+      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\interfaces\\IAdminRole.sol": {
+      "lastModificationDate": 1624639978104,
+      "contentHash": "fc2ec298e9610b83db70633189e2d5f5",
+      "sourceName": "solidities/ABCNFT721/interfaces/IAdminRole.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAdminRole"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\interfaces\\IABCNFTMarket.sol": {
+      "lastModificationDate": 1624871618528,
+      "contentHash": "a552bcca4b24ef66915ffd291ae2f865",
+      "sourceName": "solidities/ABCNFT721/interfaces/IABCNFTMarket.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IABCNFTMarket"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol": {
+      "lastModificationDate": 1627813226338,
+      "contentHash": "1337646be7d112b7fb70fd5f0929edd7",
+      "sourceName": "solidities/ABCNFTMarket/mixins/NFTMarketReserveAuction.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol",
+        "./Constants.sol",
+        "./NFTMarketCore.sol",
+        "./NFTMarketFees.sol",
+        "./SendValueWithFallbackWithdraw.sol",
+        "./NFTMarketAuction.sol",
+        "./roles/ABCproAdminRole.sol",
+        "../interfaces/IABCNFT721.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFTMarketReserveAuction"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\security\\ReentrancyGuardUpgradeable.sol": {
+      "lastModificationDate": 1624638762681,
+      "contentHash": "304d95a6b1f0ca8db842e5fe1f2024a9",
+      "sourceName": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuardUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\Constants.sol": {
+      "lastModificationDate": 1624806319404,
+      "contentHash": "a7c63c838a73878dc3c4ece83ce4e622",
+      "sourceName": "solidities/ABCNFTMarket/mixins/Constants.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Constants"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\NFTMarketCore.sol": {
+      "lastModificationDate": 1624639886570,
+      "contentHash": "79ff2e692c7fbe4ae9d310261a961fa0",
+      "sourceName": "solidities/ABCNFTMarket/mixins/NFTMarketCore.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFTMarketCore"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol": {
+      "lastModificationDate": 1629705798266,
+      "contentHash": "07afdb0b4b10baf0150129f4916c5ea5",
+      "sourceName": "solidities/ABCNFTMarket/mixins/NFTMarketFees.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol",
+        "./ABCproTreasuryNode.sol",
+        "./Constants.sol",
+        "./NFTMarketCore.sol",
+        "./NFTMarketCreators.sol",
+        "./SendValueWithFallbackWithdraw.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFTMarketFees"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\SendValueWithFallbackWithdraw.sol": {
+      "lastModificationDate": 1624645175099,
+      "contentHash": "4298a6f75e8fa5aa5be2dacb347a0f7a",
+      "sourceName": "solidities/ABCNFTMarket/mixins/SendValueWithFallbackWithdraw.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SendValueWithFallbackWithdraw"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\NFTMarketAuction.sol": {
+      "lastModificationDate": 1624639881638,
+      "contentHash": "50de346ced0a2729a5b8831b33a6d3c8",
+      "sourceName": "solidities/ABCNFTMarket/mixins/NFTMarketAuction.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFTMarketAuction"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\roles\\ABCproAdminRole.sol": {
+      "lastModificationDate": 1624798939633,
+      "contentHash": "dcca0610500789d1bfe7f736b9c80936",
+      "sourceName": "solidities/ABCNFTMarket/mixins/roles/ABCproAdminRole.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/IAdminRole.sol",
+        "../ABCproTreasuryNode.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ABCproAdminRole"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\interfaces\\IABCNFT721.sol": {
+      "lastModificationDate": 1626076905866,
+      "contentHash": "731642707fcbb67bc01e2a3662e41501",
+      "sourceName": "solidities/ABCNFTMarket/interfaces/IABCNFT721.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IABCNFT721"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\ABCproTreasuryNode.sol": {
+      "lastModificationDate": 1624798933031,
+      "contentHash": "dfa2091c84af2fb9fda6413652dfd2a2",
+      "sourceName": "solidities/ABCNFTMarket/mixins/ABCproTreasuryNode.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ABCproTreasuryNode"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\mixins\\NFTMarketCreators.sol": {
+      "lastModificationDate": 1624868457010,
+      "contentHash": "8e9a81b866435556be049646c312c2ef",
+      "sourceName": "solidities/ABCNFTMarket/mixins/NFTMarketCreators.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IABCNFT721.sol",
+        "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "NFTMarketCreators"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\interfaces\\IAdminRole.sol": {
+      "lastModificationDate": 1624639978104,
+      "contentHash": "fc2ec298e9610b83db70633189e2d5f5",
+      "sourceName": "solidities/ABCNFTMarket/interfaces/IAdminRole.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAdminRole"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCTreasury\\mixins\\roles\\AdminRole.sol": {
+      "lastModificationDate": 1624806431315,
+      "contentHash": "e6108f72dcce918a7f2ecc17bd3d5540",
+      "sourceName": "solidities/ABCTreasury/mixins/roles/AdminRole.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AdminRole"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\node_modules\\@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol": {
+      "lastModificationDate": 1624638761160,
+      "contentHash": "72dd2a9471bd1b6fef57e0b0e881aae3",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../utils/StringsUpgradeable.sol",
+        "../utils/introspection/ERC165Upgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControlUpgradeable",
+        "IAccessControlUpgradeable"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCTreasury\\mixins\\WithdrawFromEscrow.sol": {
+      "lastModificationDate": 1624806666281,
+      "contentHash": "42cdd5d702195fbbebdbf20e3e0a9d21",
+      "sourceName": "solidities/ABCTreasury/mixins/WithdrawFromEscrow.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ISendValueWithFallbackWithdraw.sol",
+        "../mixins/roles/AdminRole.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "WithdrawFromEscrow"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCTreasury\\interfaces\\ISendValueWithFallbackWithdraw.sol": {
+      "lastModificationDate": 1624806711608,
+      "contentHash": "da508cd58164f4fa46ca896afd165fd1",
+      "sourceName": "solidities/ABCTreasury/interfaces/ISendValueWithFallbackWithdraw.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ISendValueWithFallbackWithdraw"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCTreasury\\ABCTreasury.sol": {
+      "lastModificationDate": 1625299205171,
+      "contentHash": "0b2810e450ce5c326235b7f93946aac8",
+      "sourceName": "solidities/ABCTreasury/ABCTreasury.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "./mixins/roles/AdminRole.sol",
+        "./mixins/CollateralManagement.sol",
+        "./mixins/WithdrawFromEscrow.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ABCTreasury"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCTreasury\\mixins\\CollateralManagement.sol": {
+      "lastModificationDate": 1624806680603,
+      "contentHash": "435f97c886d900c2de2e452068cecd56",
+      "sourceName": "solidities/ABCTreasury/mixins/CollateralManagement.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+        "../mixins/roles/AdminRole.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "CollateralManagement"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFTMarket\\ABCNFTMarket.sol": {
+      "lastModificationDate": 1624871620658,
+      "contentHash": "60f97b3c5648ce48949a1220d06de52f",
+      "sourceName": "solidities/ABCNFTMarket/ABCNFTMarket.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./mixins/ABCproTreasuryNode.sol",
+        "./mixins/roles/ABCproAdminRole.sol",
+        "./mixins/NFTMarketCore.sol",
+        "./mixins/SendValueWithFallbackWithdraw.sol",
+        "./mixins/NFTMarketCreators.sol",
+        "./mixins/NFTMarketFees.sol",
+        "./mixins/NFTMarketAuction.sol",
+        "./mixins/NFTMarketReserveAuction.sol",
+        "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ABCNFTMarket"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCNFT721\\mixins\\roles\\AdminRole.sol": {
+      "lastModificationDate": 1624806490206,
+      "contentHash": "e6108f72dcce918a7f2ecc17bd3d5540",
+      "sourceName": "solidities/ABCNFT721/mixins/roles/AdminRole.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AdminRole"
+      ]
+    },
+    "I:\\MY_PROGRAMMINGS\\FileCoinHackathon\\abcproEN\\api\\contracts\\solidities\\ABCTreasury\\interfaces\\IAdminRole.sol": {
+      "lastModificationDate": 1624639978104,
+      "contentHash": "fc2ec298e9610b83db70633189e2d5f5",
+      "sourceName": "solidities/ABCTreasury/interfaces/IAdminRole.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAdminRole"
+      ]
+    }
+  }
+}

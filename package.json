@@ -1,0 +1,36 @@
+{
+  "name": "Abcpro",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "eslint": "^7.32.0"
+  },
+  "scripts": {
+    "installClient":" cd client && yarn",
+    "installApi":" cd api && yarn",
+    "install": "concurrently \"yarn installClient\" \"yarn installApi\"",
+    "client": "cd client && npm start",
+    "api": "cd api && npm start",
+    "dev": "concurrently \"yarn api\" \"yarn client\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
+}

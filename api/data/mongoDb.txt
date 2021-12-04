@@ -1,0 +1,17 @@
+mongo
+
+
+use ABCproDB
+db.createUser(
+  {
+    user: "abcPROUser20",
+    pwd: "2020AdminabcPRO400",
+    roles: [ { role: "readWrite", db: "ABCproDB" },
+            ]
+  }
+)
+
+# if auth failed stop mongo and start again with auth disabled
+
+
+db.auth("abcPROUser20","2020AdminabcPRO400");

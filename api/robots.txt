@@ -1,0 +1,10 @@
+# Group 1
+User-agent: *
+Allow: /views/idex
+Allow: /views/index
+Allow: /public/html/
+Allow: /public/css/
+Allow: /public/images/
+
+#Sitemap: https://ibit.exchange/sitemap.xml
+

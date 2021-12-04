@@ -1,0 +1,9 @@
+{
+  "1000": {
+    "localhost": {
+      "name": "localhost",
+      "chainId": "1000",
+      "contracts": {}
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ABCproTreasuryNode",
+  "sourceName": "solidities/ABCNFT721/mixins/ABCproTreasuryNode.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getABCproTreasury",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

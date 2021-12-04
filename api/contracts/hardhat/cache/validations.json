@@ -1,0 +1,3391 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "IAdminRole": {
+        "src": "solidities\\ABCTreasury\\interfaces\\IAdminRole.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "isAdmin(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "AccessControlUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:59",
+        "inherit": [
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "StringsUpgradeable"
+        ],
+        "methods": [
+          "supportsInterface(bytes4)",
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "_roles",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)81_storage)",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:73"
+            },
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)49_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:252"
+            }
+          ],
+          "types": {
+            "t_mapping(t_bytes32,t_struct(RoleData)81_storage)": {
+              "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)"
+            },
+            "t_bytes32": {
+              "label": "bytes32"
+            },
+            "t_struct(RoleData)81_storage": {
+              "label": "struct AccessControlUpgradeable.RoleData",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)"
+                },
+                {
+                  "label": "adminRole",
+                  "type": "t_bytes32"
+                }
+              ]
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IAccessControlUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:13",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Initializable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:18",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:23"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:28"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ReentrancyGuardUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\security\\ReentrancyGuardUpgradeable.sol:22",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin\\contracts-upgradeable\\security\\ReentrancyGuardUpgradeable.sol:37"
+            },
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)49_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\security\\ReentrancyGuardUpgradeable.sol:67"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC721ReceiverUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC721\\IERC721ReceiverUpgradeable.sol:10",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "onERC721Received(address,address,uint256,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC721Upgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC721\\IERC721Upgradeable.sol:10",
+        "inherit": [
+          "IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "safeTransferFrom(address,address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC721EnumerableUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC721\\extensions\\IERC721EnumerableUpgradeable.sol:11",
+        "inherit": [
+          "IERC721Upgradeable",
+          "IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "tokenOfOwnerByIndex(address,uint256)",
+          "tokenByIndex(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC721MetadataUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC721\\extensions\\IERC721MetadataUpgradeable.sol:11",
+        "inherit": [
+          "IERC721Upgradeable",
+          "IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "tokenURI(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\AddressUpgradeable.sol:8",
+        "version": {
+          "withMetadata": "d53d392d5ee0a1947c3ec0aedfbd201b3ed3e9c01ad4efa142ec2b628797277b",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:16",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ContextUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)50_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:31"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "StringsUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\StringsUpgradeable.sol:8",
+        "version": {
+          "withMetadata": "8d8f1357deaa1395b6baec99c054ecc3385b9b3def1139763b035ad3e94053f3",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC165StorageUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165StorageUpgradeable.sol:14",
+        "inherit": [
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC165StorageUpgradeable",
+              "label": "_supportedInterfaces",
+              "type": "t_mapping(t_bytes4,t_bool)",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165StorageUpgradeable.sol:25"
+            },
+            {
+              "contract": "ERC165StorageUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)49_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165StorageUpgradeable.sol:49"
+            }
+          ],
+          "types": {
+            "t_mapping(t_bytes4,t_bool)": {
+              "label": "mapping(bytes4 => bool)"
+            },
+            "t_bytes4": {
+              "label": "bytes4"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC165Upgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165Upgradeable.sol:22",
+        "inherit": [
+          "IERC165Upgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC165Upgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)50_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165Upgradeable.sol:35"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC165Upgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\IERC165Upgradeable.sol:14",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMathUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\math\\SafeMathUpgradeable.sol:15",
+        "version": {
+          "withMetadata": "bc37a41e06ca7a61bd52f366605e81b4c094073d407ffff462c1c967fa06391a",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EnumerableMapUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\structs\\EnumerableMapUpgradeable.sol:31",
+        "version": {
+          "withMetadata": "98b6d6af689af2ba0075b3a519ede5ab016126a9e9417d210d6fb3ac5e70e471",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\structs\\EnumerableSetUpgradeable.sol:29",
+        "version": {
+          "withMetadata": "2b52cf26423cd9c26cf621be064bbae0172769f896606fd1ed88ab26034c86bc",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "console": {
+        "src": "hardhat\\console.sol:4",
+        "version": {
+          "withMetadata": "3916ba011b0c1df1c65b92f8d4109aed2e9f03f8828bb93b6bbf8377e5cc6454",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCNFT721": {
+        "src": "solidities\\ABCNFT721\\ABCNFT721.sol:21",
+        "version": {
+          "withMetadata": "2fa1a1a91f6411c02aafbb220a3dc5e308cc92e36d39ad2c5c8aeb579c5585b9",
+          "withoutMetadata": "10bf664804a6a9da8a9770f59bdb6f87e5d32701d81ac8bce0664b34d46e3a4a",
+          "linkedWithoutMetadata": "10bf664804a6a9da8a9770f59bdb6f87e5d32701d81ac8bce0664b34d46e3a4a"
+        },
+        "inherit": [
+          "NFT721Mint",
+          "NFT721Metadata",
+          "NFT721Market",
+          "NFT721Creator",
+          "NFT721Core",
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "HasSecondarySaleFees",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "ABCproAdminRole",
+          "ABCproTreasuryNode",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address payable,string,string)",
+          "adminUpdateConfig(address,string)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IABCNFTMarket": {
+        "src": "solidities\\ABCNFT721\\interfaces\\IABCNFTMarket.sol:6",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "getFeeConfig()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IAdminRole": {
+        "src": "solidities\\ABCNFTMarket\\interfaces\\IAdminRole.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "isAdmin(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCproTreasuryNode": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\ABCproTreasuryNode.sol:11",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [
+          "getABCproTreasury()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ABCproTreasuryNode",
+              "label": "treasury",
+              "type": "t_address_payable",
+              "src": "solidities\\ABCNFTMarket\\mixins\\ABCproTreasuryNode.sol:14"
+            },
+            {
+              "contract": "ABCproTreasuryNode",
+              "label": "__gap",
+              "type": "t_array(t_uint256)2000_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\ABCproTreasuryNode.sol:32"
+            }
+          ],
+          "types": {
+            "t_address_payable": {
+              "label": "address payable"
+            },
+            "t_array(t_uint256)2000_storage": {
+              "label": "uint256[2000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "HasSecondarySaleFees": {
+        "src": "solidities\\ABCNFT721\\mixins\\HasSecondarySaleFees.sol:12",
+        "inherit": [
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "getFeeRecipients(uint256)",
+          "getFeeBps(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Core": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Core.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Core",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Core.sol:10"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Creator": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Creator.sol:15",
+        "inherit": [
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "registerInterfaces()",
+          "tokenCreator(uint256)",
+          "getTokenCreatorPaymentAddress(uint256)",
+          "burn(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Creator",
+              "label": "tokenIdToCreator",
+              "type": "t_mapping(t_uint256,t_address_payable)",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Creator.sol:16"
+            },
+            {
+              "contract": "NFT721Creator",
+              "label": "tokenIdToCreatorPaymentAddress",
+              "type": "t_mapping(t_uint256,t_address_payable)",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Creator.sol:21"
+            },
+            {
+              "contract": "NFT721Creator",
+              "label": "______gap",
+              "type": "t_array(t_uint256)999_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Creator.sol:146"
+            }
+          ],
+          "types": {
+            "t_mapping(t_uint256,t_address_payable)": {
+              "label": "mapping(uint256 => address payable)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_address_payable": {
+              "label": "address payable"
+            },
+            "t_array(t_uint256)999_storage": {
+              "label": "uint256[999]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Market": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Market.sol:17",
+        "inherit": [
+          "NFT721Creator",
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "HasSecondarySaleFees",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "ABCproTreasuryNode",
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [
+          "getNFTMarket()",
+          "getFeeRecipients(uint256)",
+          "getFeeBps(uint256)",
+          "getFees(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Market",
+              "label": "nftMarket",
+              "type": "t_contract(IABCNFTMarket)10810",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Market.sol:26"
+            },
+            {
+              "contract": "NFT721Market",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Market.sol:103"
+            }
+          ],
+          "types": {
+            "t_contract(IABCNFTMarket)10810": {
+              "label": "contract IABCNFTMarket"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Metadata": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Metadata.sol:13",
+        "inherit": [
+          "NFT721Creator",
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "StringsUpgradeable"
+        ],
+        "methods": [
+          "getTokenIPFSPath(uint256)",
+          "getHasCreatorMintedIPFSHash(address,string)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Metadata",
+              "label": "creatorToIPFSHashToMinted",
+              "type": "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_bool))",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Metadata.sol:19"
+            },
+            {
+              "contract": "NFT721Metadata",
+              "label": "______gap",
+              "type": "t_array(t_uint256)999_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Metadata.sol:81"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_bool))": {
+              "label": "mapping(address => mapping(string => bool))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_string_memory_ptr,t_bool)": {
+              "label": "mapping(string => bool)"
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_uint256)999_storage": {
+              "label": "uint256[999]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Mint": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Mint.sol:21",
+        "inherit": [
+          "NFT721Metadata",
+          "NFT721Market",
+          "NFT721Creator",
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "HasSecondarySaleFees",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "ABCproTreasuryNode",
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable",
+          "console"
+        ],
+        "methods": [
+          "getNextTokenId()",
+          "mintForAndApproveMarketOnABC(string,address payable,address payable)",
+          "mintFor(address payable,address payable,string)",
+          "mint(string)",
+          "mintAndApproveMarket(string)",
+          "mintWithCreatorPaymentAddress(string,address payable)",
+          "mintWithCreatorPaymentAddressAndApproveMarket(string,address payable)",
+          "mintWithCreatorPaymentFactory(string,address,bytes)",
+          "mintWithCreatorPaymentFactoryAndApproveMarket(string,address,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Mint",
+              "label": "nextTokenId",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Mint.sol:30"
+            },
+            {
+              "contract": "NFT721Mint",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Mint.sol:217"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC721Upgradeable": {
+        "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:32",
+        "version": {
+          "withMetadata": "257863a585a8434a3f4da956489ebb224e5e6170149343d734cfc1b65d4b78f7",
+          "withoutMetadata": "c0bb3f291f1f183e8fcf85da7220903d427996819cce49eae7d6eaedfed63d8b",
+          "linkedWithoutMetadata": "c0bb3f291f1f183e8fcf85da7220903d427996819cce49eae7d6eaedfed63d8b"
+        },
+        "inherit": [
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable",
+          "AddressUpgradeable",
+          "EnumerableSetUpgradeable",
+          "EnumerableMapUpgradeable",
+          "StringsUpgradeable",
+          "console"
+        ],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "name()",
+          "symbol()",
+          "tokenURI(uint256)",
+          "baseURI()",
+          "tokenOfOwnerByIndex(address,uint256)",
+          "totalSupply()",
+          "tokenByIndex(uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "transferFrom(address,address,uint256)",
+          "safeTransferFrom(address,address,uint256)",
+          "safeTransferFrom(address,address,uint256,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_holderTokens",
+              "type": "t_mapping(t_address,t_struct(UintSet)2522_storage)",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:52"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenOwners",
+              "type": "t_struct(UintToAddressMap)1875_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:55"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:58"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:61"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:64"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:67"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenURIs",
+              "type": "t_mapping(t_uint256,t_string_storage)",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:70"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_baseURI",
+              "type": "t_string_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:73"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)41_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:649"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_struct(UintSet)2522_storage)": {
+              "label": "mapping(address => struct EnumerableSetUpgradeable.UintSet)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_struct(UintSet)2522_storage": {
+              "label": "struct EnumerableSetUpgradeable.UintSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)2120_storage"
+                }
+              ]
+            },
+            "t_struct(Set)2120_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)"
+                }
+              ]
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]"
+            },
+            "t_bytes32": {
+              "label": "bytes32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_struct(UintToAddressMap)1875_storage": {
+              "label": "struct EnumerableMapUpgradeable.UintToAddressMap",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Map)1645_storage"
+                }
+              ]
+            },
+            "t_struct(Map)1645_storage": {
+              "label": "struct EnumerableMapUpgradeable.Map",
+              "members": [
+                {
+                  "label": "_keys",
+                  "type": "t_struct(Bytes32Set)2304_storage"
+                },
+                {
+                  "label": "_values",
+                  "type": "t_mapping(t_bytes32,t_bytes32)"
+                }
+              ]
+            },
+            "t_struct(Bytes32Set)2304_storage": {
+              "label": "struct EnumerableSetUpgradeable.Bytes32Set",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)2120_storage"
+                }
+              ]
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_mapping(t_uint256,t_string_storage)": {
+              "label": "mapping(uint256 => string)"
+            },
+            "t_array(t_uint256)41_storage": {
+              "label": "uint256[41]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCproAdminRole": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\roles\\ABCproAdminRole.sol:11",
+        "inherit": [
+          "ABCproTreasuryNode",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AdminRole": {
+        "src": "solidities\\ABCTreasury\\mixins\\roles\\AdminRole.sol:11",
+        "inherit": [
+          "AccessControlUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "isAdmin(address)",
+          "grantAdmin(address)",
+          "revokeAdmin(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "AdminRole",
+              "label": "__gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCTreasury\\mixins\\roles\\AdminRole.sol:41"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCNFTMarket": {
+        "src": "solidities\\ABCNFTMarket\\ABCNFTMarket.sol:20",
+        "version": {
+          "withMetadata": "c85c31a5aff370efc66dc8cf6acb3bd514b4ad5e3d84a77029a179b8f4c7fc41",
+          "withoutMetadata": "ba5080af80704e89eae754642c972f4193e57ee693742279907ba04de169ed2c",
+          "linkedWithoutMetadata": "ba5080af80704e89eae754642c972f4193e57ee693742279907ba04de169ed2c"
+        },
+        "inherit": [
+          "NFTMarketReserveAuction",
+          "NFTMarketAuction",
+          "NFTMarketFees",
+          "SendValueWithFallbackWithdraw",
+          "NFTMarketCreators",
+          "ReentrancyGuardUpgradeable",
+          "NFTMarketCore",
+          "ABCproAdminRole",
+          "ABCproTreasuryNode",
+          "Initializable",
+          "Constants"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address payable)",
+          "adminUpdateConfig(uint256,uint256,uint256,uint256,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IABCNFT721": {
+        "src": "solidities\\ABCNFTMarket\\interfaces\\IABCNFT721.sol:6",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "tokenCreator(uint256)",
+          "getTokenCreatorPaymentAddress(uint256)",
+          "mintAndApproveMarket(string)",
+          "mintForAndApproveMarketOnABC(string,address payable,address payable)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Constants": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\Constants.sol:7",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketAuction": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketAuction.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketAuction",
+              "label": "nextAuctionId",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketAuction.sol:12"
+            },
+            {
+              "contract": "NFTMarketAuction",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketAuction.sol:22"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketCore": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketCore.sol:10",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketCore",
+              "label": "______gap",
+              "type": "t_array(t_uint256)950_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketCore.sol:20"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)950_storage": {
+              "label": "uint256[950]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketCreators": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketCreators.sol:13",
+        "inherit": [
+          "ReentrancyGuardUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketCreators",
+              "label": "______gap",
+              "type": "t_array(t_uint256)500_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketCreators.sol:59"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)500_storage": {
+              "label": "uint256[500]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketFees": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:18",
+        "inherit": [
+          "SendValueWithFallbackWithdraw",
+          "NFTMarketCreators",
+          "ReentrancyGuardUpgradeable",
+          "NFTMarketCore",
+          "ABCproTreasuryNode",
+          "Initializable",
+          "Constants"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable"
+        ],
+        "methods": [
+          "getIsPrimary(address,uint256)",
+          "getFeeConfig()",
+          "getFees(address,uint256,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketFees",
+              "label": "_primaryABCproFeeBasisPoints",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:34"
+            },
+            {
+              "contract": "NFTMarketFees",
+              "label": "_secondaryABCproFeeBasisPoints",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:35"
+            },
+            {
+              "contract": "NFTMarketFees",
+              "label": "_secondaryCreatorFeeBasisPoints",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:36"
+            },
+            {
+              "contract": "NFTMarketFees",
+              "label": "nftContractToTokenIdToFirstSaleCompleted",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:38"
+            },
+            {
+              "contract": "NFTMarketFees",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:208"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketReserveAuction": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:24",
+        "inherit": [
+          "NFTMarketAuction",
+          "NFTMarketFees",
+          "SendValueWithFallbackWithdraw",
+          "NFTMarketCreators",
+          "ReentrancyGuardUpgradeable",
+          "NFTMarketCore",
+          "ABCproAdminRole",
+          "ABCproTreasuryNode",
+          "Initializable",
+          "Constants"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable",
+          "console"
+        ],
+        "methods": [
+          "getReserveAuction(uint256)",
+          "getReserveAuctionIdFor(address,uint256)",
+          "getReserveAuctionConfig()",
+          "createReserveAuction(address,uint256,uint256)",
+          "updateReserveAuction(uint256,uint256)",
+          "cancelReserveAuction(uint256)",
+          "MintForAndplaceFirstBidOnABC(string,address payable,uint256,address)",
+          "placeBid(uint256)",
+          "finalizeReserveAuction(uint256)",
+          "getMinBidAmount(uint256)",
+          "adminCancelReserveAuction(uint256,string)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "nftContractToTokenIdToAuctionId",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:46"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "auctionIdToAuction",
+              "type": "t_mapping(t_uint256,t_struct(ReserveAuction)13794_storage)",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:48"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "_minPercentIncrementInBasisPoints",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:50"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "______gap_was_maxBidIncrementRequirement",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:53"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "_duration",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:55"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "______gap_was_extensionDuration",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:58"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "______gap_was_goLiveDate",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:59"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:639"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+              "label": "mapping(address => mapping(uint256 => uint256))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_uint256)": {
+              "label": "mapping(uint256 => uint256)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(ReserveAuction)13794_storage)": {
+              "label": "mapping(uint256 => struct NFTMarketReserveAuction.ReserveAuction)"
+            },
+            "t_struct(ReserveAuction)13794_storage": {
+              "label": "struct NFTMarketReserveAuction.ReserveAuction",
+              "members": [
+                {
+                  "label": "nftContract",
+                  "type": "t_address"
+                },
+                {
+                  "label": "tokenId",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "seller",
+                  "type": "t_address_payable"
+                },
+                {
+                  "label": "duration",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "extensionDuration",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "endTime",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "bidder",
+                  "type": "t_address_payable"
+                },
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_address_payable": {
+              "label": "address payable"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SendValueWithFallbackWithdraw": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\SendValueWithFallbackWithdraw.sol:12",
+        "inherit": [
+          "ReentrancyGuardUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable",
+          "SafeMathUpgradeable"
+        ],
+        "methods": [
+          "getPendingWithdrawal(address)",
+          "withdraw()",
+          "withdrawFor(address payable)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SendValueWithFallbackWithdraw",
+              "label": "pendingWithdrawals",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "solidities\\ABCNFTMarket\\mixins\\SendValueWithFallbackWithdraw.sol:16"
+            },
+            {
+              "contract": "SendValueWithFallbackWithdraw",
+              "label": "______gap",
+              "type": "t_array(t_uint256)499_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\SendValueWithFallbackWithdraw.sol:85"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_array(t_uint256)499_storage": {
+              "label": "uint256[499]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCTreasury": {
+        "src": "solidities\\ABCTreasury\\ABCTreasury.sol:17",
+        "version": {
+          "withMetadata": "caf730b548c85d2ceecd285a65508051578322288571068ba9f85a9101779538",
+          "withoutMetadata": "a69ca97fc4d80755eec58a3f5650524b74a81de9c6c4686a0d1e274e225c9b7e",
+          "linkedWithoutMetadata": "a69ca97fc4d80755eec58a3f5650524b74a81de9c6c4686a0d1e274e225c9b7e"
+        },
+        "inherit": [
+          "WithdrawFromEscrow",
+          "CollateralManagement",
+          "AdminRole",
+          "AccessControlUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ISendValueWithFallbackWithdraw": {
+        "src": "solidities\\ABCTreasury\\interfaces\\ISendValueWithFallbackWithdraw.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "withdraw()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "CollateralManagement": {
+        "src": "solidities\\ABCTreasury\\mixins\\CollateralManagement.sol:12",
+        "inherit": [
+          "AdminRole",
+          "AccessControlUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [
+          "()",
+          "withdrawFunds(address payable,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "CollateralManagement",
+              "label": "__gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCTreasury\\mixins\\CollateralManagement.sol:40"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "WithdrawFromEscrow": {
+        "src": "solidities\\ABCTreasury\\mixins\\WithdrawFromEscrow.sol:11",
+        "inherit": [
+          "AdminRole",
+          "AccessControlUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "withdrawFromEscrow(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "IAdminRole": {
+        "src": "solidities\\ABCTreasury\\interfaces\\IAdminRole.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "isAdmin(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "IABCNFT721": {
+        "src": "solidities\\ABCNFT721\\interfaces\\del-IABCNFT721.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "tokenCreator(uint256)",
+          "getTokenCreatorPaymentAddress(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "AccessControlUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:59",
+        "inherit": [
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "StringsUpgradeable"
+        ],
+        "methods": [
+          "supportsInterface(bytes4)",
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "_roles",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)81_storage)",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:73"
+            },
+            {
+              "contract": "AccessControlUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)49_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:252"
+            }
+          ],
+          "types": {
+            "t_mapping(t_bytes32,t_struct(RoleData)81_storage)": {
+              "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)"
+            },
+            "t_bytes32": {
+              "label": "bytes32"
+            },
+            "t_struct(RoleData)81_storage": {
+              "label": "struct AccessControlUpgradeable.RoleData",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)"
+                },
+                {
+                  "label": "adminRole",
+                  "type": "t_bytes32"
+                }
+              ]
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IAccessControlUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:13",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Initializable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:18",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:23"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:28"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ReentrancyGuardUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\security\\ReentrancyGuardUpgradeable.sol:22",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin\\contracts-upgradeable\\security\\ReentrancyGuardUpgradeable.sol:37"
+            },
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)49_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\security\\ReentrancyGuardUpgradeable.sol:67"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC721ReceiverUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC721\\IERC721ReceiverUpgradeable.sol:10",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "onERC721Received(address,address,uint256,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC721Upgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC721\\IERC721Upgradeable.sol:10",
+        "inherit": [
+          "IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "safeTransferFrom(address,address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC721EnumerableUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC721\\extensions\\IERC721EnumerableUpgradeable.sol:11",
+        "inherit": [
+          "IERC721Upgradeable",
+          "IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "tokenOfOwnerByIndex(address,uint256)",
+          "tokenByIndex(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC721MetadataUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC721\\extensions\\IERC721MetadataUpgradeable.sol:11",
+        "inherit": [
+          "IERC721Upgradeable",
+          "IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "tokenURI(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\AddressUpgradeable.sol:8",
+        "version": {
+          "withMetadata": "d53d392d5ee0a1947c3ec0aedfbd201b3ed3e9c01ad4efa142ec2b628797277b",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:16",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ContextUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)50_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:31"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "StringsUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\StringsUpgradeable.sol:8",
+        "version": {
+          "withMetadata": "8d8f1357deaa1395b6baec99c054ecc3385b9b3def1139763b035ad3e94053f3",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC165StorageUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165StorageUpgradeable.sol:14",
+        "inherit": [
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC165StorageUpgradeable",
+              "label": "_supportedInterfaces",
+              "type": "t_mapping(t_bytes4,t_bool)",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165StorageUpgradeable.sol:25"
+            },
+            {
+              "contract": "ERC165StorageUpgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)49_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165StorageUpgradeable.sol:49"
+            }
+          ],
+          "types": {
+            "t_mapping(t_bytes4,t_bool)": {
+              "label": "mapping(bytes4 => bool)"
+            },
+            "t_bytes4": {
+              "label": "bytes4"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC165Upgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165Upgradeable.sol:22",
+        "inherit": [
+          "IERC165Upgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC165Upgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)50_storage",
+              "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165Upgradeable.sol:35"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC165Upgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\IERC165Upgradeable.sol:14",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMathUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\math\\SafeMathUpgradeable.sol:15",
+        "version": {
+          "withMetadata": "bc37a41e06ca7a61bd52f366605e81b4c094073d407ffff462c1c967fa06391a",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EnumerableMapUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\structs\\EnumerableMapUpgradeable.sol:31",
+        "version": {
+          "withMetadata": "98b6d6af689af2ba0075b3a519ede5ab016126a9e9417d210d6fb3ac5e70e471",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\structs\\EnumerableSetUpgradeable.sol:29",
+        "version": {
+          "withMetadata": "2b52cf26423cd9c26cf621be064bbae0172769f896606fd1ed88ab26034c86bc",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "console": {
+        "src": "hardhat\\console.sol:4",
+        "version": {
+          "withMetadata": "3916ba011b0c1df1c65b92f8d4109aed2e9f03f8828bb93b6bbf8377e5cc6454",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCNFT721": {
+        "src": "solidities\\ABCNFT721\\ABCNFT721.sol:21",
+        "version": {
+          "withMetadata": "2fa1a1a91f6411c02aafbb220a3dc5e308cc92e36d39ad2c5c8aeb579c5585b9",
+          "withoutMetadata": "10bf664804a6a9da8a9770f59bdb6f87e5d32701d81ac8bce0664b34d46e3a4a",
+          "linkedWithoutMetadata": "10bf664804a6a9da8a9770f59bdb6f87e5d32701d81ac8bce0664b34d46e3a4a"
+        },
+        "inherit": [
+          "NFT721Mint",
+          "NFT721Metadata",
+          "NFT721Market",
+          "NFT721Creator",
+          "NFT721Core",
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "HasSecondarySaleFees",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "ABCproAdminRole",
+          "ABCproTreasuryNode",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address payable,string,string)",
+          "adminUpdateConfig(address,string)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IABCNFTMarket": {
+        "src": "solidities\\ABCNFT721\\interfaces\\IABCNFTMarket.sol:6",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "getFeeConfig()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IAdminRole": {
+        "src": "solidities\\ABCNFTMarket\\interfaces\\IAdminRole.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "isAdmin(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCproTreasuryNode": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\ABCproTreasuryNode.sol:11",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [
+          "getABCproTreasury()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ABCproTreasuryNode",
+              "label": "treasury",
+              "type": "t_address_payable",
+              "src": "solidities\\ABCNFTMarket\\mixins\\ABCproTreasuryNode.sol:14"
+            },
+            {
+              "contract": "ABCproTreasuryNode",
+              "label": "__gap",
+              "type": "t_array(t_uint256)2000_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\ABCproTreasuryNode.sol:32"
+            }
+          ],
+          "types": {
+            "t_address_payable": {
+              "label": "address payable"
+            },
+            "t_array(t_uint256)2000_storage": {
+              "label": "uint256[2000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "HasSecondarySaleFees": {
+        "src": "solidities\\ABCNFT721\\mixins\\HasSecondarySaleFees.sol:12",
+        "inherit": [
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "getFeeRecipients(uint256)",
+          "getFeeBps(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Core": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Core.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Core",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Core.sol:10"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Creator": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Creator.sol:15",
+        "inherit": [
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "registerInterfaces()",
+          "tokenCreator(uint256)",
+          "getTokenCreatorPaymentAddress(uint256)",
+          "burn(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Creator",
+              "label": "tokenIdToCreator",
+              "type": "t_mapping(t_uint256,t_address_payable)",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Creator.sol:16"
+            },
+            {
+              "contract": "NFT721Creator",
+              "label": "tokenIdToCreatorPaymentAddress",
+              "type": "t_mapping(t_uint256,t_address_payable)",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Creator.sol:21"
+            },
+            {
+              "contract": "NFT721Creator",
+              "label": "______gap",
+              "type": "t_array(t_uint256)999_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Creator.sol:146"
+            }
+          ],
+          "types": {
+            "t_mapping(t_uint256,t_address_payable)": {
+              "label": "mapping(uint256 => address payable)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_address_payable": {
+              "label": "address payable"
+            },
+            "t_array(t_uint256)999_storage": {
+              "label": "uint256[999]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Market": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Market.sol:17",
+        "inherit": [
+          "NFT721Creator",
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "HasSecondarySaleFees",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "ABCproTreasuryNode",
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [
+          "getNFTMarket()",
+          "getFeeRecipients(uint256)",
+          "getFeeBps(uint256)",
+          "getFees(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Market",
+              "label": "nftMarket",
+              "type": "t_contract(IABCNFTMarket)10810",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Market.sol:26"
+            },
+            {
+              "contract": "NFT721Market",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Market.sol:103"
+            }
+          ],
+          "types": {
+            "t_contract(IABCNFTMarket)10810": {
+              "label": "contract IABCNFTMarket"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Metadata": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Metadata.sol:13",
+        "inherit": [
+          "NFT721Creator",
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "StringsUpgradeable"
+        ],
+        "methods": [
+          "getTokenIPFSPath(uint256)",
+          "getHasCreatorMintedIPFSHash(address,string)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Metadata",
+              "label": "creatorToIPFSHashToMinted",
+              "type": "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_bool))",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Metadata.sol:19"
+            },
+            {
+              "contract": "NFT721Metadata",
+              "label": "______gap",
+              "type": "t_array(t_uint256)999_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Metadata.sol:81"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_bool))": {
+              "label": "mapping(address => mapping(string => bool))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_string_memory_ptr,t_bool)": {
+              "label": "mapping(string => bool)"
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_uint256)999_storage": {
+              "label": "uint256[999]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFT721Mint": {
+        "src": "solidities\\ABCNFT721\\mixins\\NFT721Mint.sol:21",
+        "inherit": [
+          "NFT721Metadata",
+          "NFT721Market",
+          "NFT721Creator",
+          "ERC721Upgradeable",
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "HasSecondarySaleFees",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "ABCproTreasuryNode",
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable",
+          "console"
+        ],
+        "methods": [
+          "getNextTokenId()",
+          "mintForAndApproveMarketOnABC(string,address payable,address payable)",
+          "mintFor(address payable,address payable,string)",
+          "mint(string)",
+          "mintAndApproveMarket(string)",
+          "mintWithCreatorPaymentAddress(string,address payable)",
+          "mintWithCreatorPaymentAddressAndApproveMarket(string,address payable)",
+          "mintWithCreatorPaymentFactory(string,address,bytes)",
+          "mintWithCreatorPaymentFactoryAndApproveMarket(string,address,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFT721Mint",
+              "label": "nextTokenId",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Mint.sol:30"
+            },
+            {
+              "contract": "NFT721Mint",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\NFT721Mint.sol:217"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC721Upgradeable": {
+        "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:32",
+        "version": {
+          "withMetadata": "257863a585a8434a3f4da956489ebb224e5e6170149343d734cfc1b65d4b78f7",
+          "withoutMetadata": "c0bb3f291f1f183e8fcf85da7220903d427996819cce49eae7d6eaedfed63d8b",
+          "linkedWithoutMetadata": "c0bb3f291f1f183e8fcf85da7220903d427996819cce49eae7d6eaedfed63d8b"
+        },
+        "inherit": [
+          "IERC721EnumerableUpgradeable",
+          "IERC721MetadataUpgradeable",
+          "IERC721Upgradeable",
+          "ERC165StorageUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable",
+          "AddressUpgradeable",
+          "EnumerableSetUpgradeable",
+          "EnumerableMapUpgradeable",
+          "StringsUpgradeable",
+          "console"
+        ],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "name()",
+          "symbol()",
+          "tokenURI(uint256)",
+          "baseURI()",
+          "tokenOfOwnerByIndex(address,uint256)",
+          "totalSupply()",
+          "tokenByIndex(uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "transferFrom(address,address,uint256)",
+          "safeTransferFrom(address,address,uint256)",
+          "safeTransferFrom(address,address,uint256,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_holderTokens",
+              "type": "t_mapping(t_address,t_struct(UintSet)2522_storage)",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:52"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenOwners",
+              "type": "t_struct(UintToAddressMap)1875_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:55"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:58"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:61"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:64"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:67"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenURIs",
+              "type": "t_mapping(t_uint256,t_string_storage)",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:70"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_baseURI",
+              "type": "t_string_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:73"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "__gap",
+              "type": "t_array(t_uint256)41_storage",
+              "src": "solidities\\ABCNFT721\\mixins\\OZ\\ERC721Upgradeable.sol:649"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_struct(UintSet)2522_storage)": {
+              "label": "mapping(address => struct EnumerableSetUpgradeable.UintSet)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_struct(UintSet)2522_storage": {
+              "label": "struct EnumerableSetUpgradeable.UintSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)2120_storage"
+                }
+              ]
+            },
+            "t_struct(Set)2120_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)"
+                }
+              ]
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]"
+            },
+            "t_bytes32": {
+              "label": "bytes32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_struct(UintToAddressMap)1875_storage": {
+              "label": "struct EnumerableMapUpgradeable.UintToAddressMap",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Map)1645_storage"
+                }
+              ]
+            },
+            "t_struct(Map)1645_storage": {
+              "label": "struct EnumerableMapUpgradeable.Map",
+              "members": [
+                {
+                  "label": "_keys",
+                  "type": "t_struct(Bytes32Set)2304_storage"
+                },
+                {
+                  "label": "_values",
+                  "type": "t_mapping(t_bytes32,t_bytes32)"
+                }
+              ]
+            },
+            "t_struct(Bytes32Set)2304_storage": {
+              "label": "struct EnumerableSetUpgradeable.Bytes32Set",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)2120_storage"
+                }
+              ]
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_mapping(t_uint256,t_string_storage)": {
+              "label": "mapping(uint256 => string)"
+            },
+            "t_array(t_uint256)41_storage": {
+              "label": "uint256[41]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCproAdminRole": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\roles\\ABCproAdminRole.sol:11",
+        "inherit": [
+          "ABCproTreasuryNode",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AdminRole": {
+        "src": "solidities\\ABCTreasury\\mixins\\roles\\AdminRole.sol:11",
+        "inherit": [
+          "AccessControlUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "isAdmin(address)",
+          "grantAdmin(address)",
+          "revokeAdmin(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "AdminRole",
+              "label": "__gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCTreasury\\mixins\\roles\\AdminRole.sol:41"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCNFTMarket": {
+        "src": "solidities\\ABCNFTMarket\\ABCNFTMarket.sol:20",
+        "version": {
+          "withMetadata": "a384579d4d62f235b1ae26571bdb2cfc902d03e9b0253c4cf51c3a2cda521974",
+          "withoutMetadata": "ba5080af80704e89eae754642c972f4193e57ee693742279907ba04de169ed2c",
+          "linkedWithoutMetadata": "ba5080af80704e89eae754642c972f4193e57ee693742279907ba04de169ed2c"
+        },
+        "inherit": [
+          "NFTMarketReserveAuction",
+          "NFTMarketAuction",
+          "NFTMarketFees",
+          "SendValueWithFallbackWithdraw",
+          "NFTMarketCreators",
+          "ReentrancyGuardUpgradeable",
+          "NFTMarketCore",
+          "ABCproAdminRole",
+          "ABCproTreasuryNode",
+          "Initializable",
+          "Constants"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address payable)",
+          "adminUpdateConfig(uint256,uint256,uint256,uint256,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IABCNFT721": {
+        "src": "solidities\\ABCNFTMarket\\interfaces\\IABCNFT721.sol:6",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "tokenCreator(uint256)",
+          "getTokenCreatorPaymentAddress(uint256)",
+          "mintAndApproveMarket(string)",
+          "mintForAndApproveMarketOnABC(string,address payable,address payable)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Constants": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\Constants.sol:7",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketAuction": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketAuction.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketAuction",
+              "label": "nextAuctionId",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketAuction.sol:12"
+            },
+            {
+              "contract": "NFTMarketAuction",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketAuction.sol:22"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketCore": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketCore.sol:10",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketCore",
+              "label": "______gap",
+              "type": "t_array(t_uint256)950_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketCore.sol:20"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)950_storage": {
+              "label": "uint256[950]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketCreators": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketCreators.sol:13",
+        "inherit": [
+          "ReentrancyGuardUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketCreators",
+              "label": "______gap",
+              "type": "t_array(t_uint256)500_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketCreators.sol:59"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)500_storage": {
+              "label": "uint256[500]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketFees": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:18",
+        "inherit": [
+          "SendValueWithFallbackWithdraw",
+          "NFTMarketCreators",
+          "ReentrancyGuardUpgradeable",
+          "NFTMarketCore",
+          "ABCproTreasuryNode",
+          "Initializable",
+          "Constants"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable"
+        ],
+        "methods": [
+          "getIsPrimary(address,uint256)",
+          "getFeeConfig()",
+          "getFees(address,uint256,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketFees",
+              "label": "_primaryABCproFeeBasisPoints",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:34"
+            },
+            {
+              "contract": "NFTMarketFees",
+              "label": "_secondaryABCproFeeBasisPoints",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:35"
+            },
+            {
+              "contract": "NFTMarketFees",
+              "label": "_secondaryCreatorFeeBasisPoints",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:36"
+            },
+            {
+              "contract": "NFTMarketFees",
+              "label": "nftContractToTokenIdToFirstSaleCompleted",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:38"
+            },
+            {
+              "contract": "NFTMarketFees",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketFees.sol:206"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "NFTMarketReserveAuction": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:24",
+        "inherit": [
+          "NFTMarketAuction",
+          "NFTMarketFees",
+          "SendValueWithFallbackWithdraw",
+          "NFTMarketCreators",
+          "ReentrancyGuardUpgradeable",
+          "NFTMarketCore",
+          "ABCproAdminRole",
+          "ABCproTreasuryNode",
+          "Initializable",
+          "Constants"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable",
+          "console"
+        ],
+        "methods": [
+          "getReserveAuction(uint256)",
+          "getReserveAuctionIdFor(address,uint256)",
+          "getReserveAuctionConfig()",
+          "createReserveAuction(address,uint256,uint256)",
+          "updateReserveAuction(uint256,uint256)",
+          "cancelReserveAuction(uint256)",
+          "MintForAndplaceFirstBidOnABC(string,address payable,uint256,address)",
+          "placeBid(uint256)",
+          "finalizeReserveAuction(uint256)",
+          "getMinBidAmount(uint256)",
+          "adminCancelReserveAuction(uint256,string)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "nftContractToTokenIdToAuctionId",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:46"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "auctionIdToAuction",
+              "type": "t_mapping(t_uint256,t_struct(ReserveAuction)13794_storage)",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:48"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "_minPercentIncrementInBasisPoints",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:50"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "______gap_was_maxBidIncrementRequirement",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:53"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "_duration",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:55"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "______gap_was_extensionDuration",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:58"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "______gap_was_goLiveDate",
+              "type": "t_uint256",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:59"
+            },
+            {
+              "contract": "NFTMarketReserveAuction",
+              "label": "______gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\NFTMarketReserveAuction.sol:639"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+              "label": "mapping(address => mapping(uint256 => uint256))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_uint256)": {
+              "label": "mapping(uint256 => uint256)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(ReserveAuction)13794_storage)": {
+              "label": "mapping(uint256 => struct NFTMarketReserveAuction.ReserveAuction)"
+            },
+            "t_struct(ReserveAuction)13794_storage": {
+              "label": "struct NFTMarketReserveAuction.ReserveAuction",
+              "members": [
+                {
+                  "label": "nftContract",
+                  "type": "t_address"
+                },
+                {
+                  "label": "tokenId",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "seller",
+                  "type": "t_address_payable"
+                },
+                {
+                  "label": "duration",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "extensionDuration",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "endTime",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "bidder",
+                  "type": "t_address_payable"
+                },
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_address_payable": {
+              "label": "address payable"
+            },
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SendValueWithFallbackWithdraw": {
+        "src": "solidities\\ABCNFTMarket\\mixins\\SendValueWithFallbackWithdraw.sol:12",
+        "inherit": [
+          "ReentrancyGuardUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable",
+          "SafeMathUpgradeable"
+        ],
+        "methods": [
+          "getPendingWithdrawal(address)",
+          "withdraw()",
+          "withdrawFor(address payable)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SendValueWithFallbackWithdraw",
+              "label": "pendingWithdrawals",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "solidities\\ABCNFTMarket\\mixins\\SendValueWithFallbackWithdraw.sol:16"
+            },
+            {
+              "contract": "SendValueWithFallbackWithdraw",
+              "label": "______gap",
+              "type": "t_array(t_uint256)499_storage",
+              "src": "solidities\\ABCNFTMarket\\mixins\\SendValueWithFallbackWithdraw.sol:85"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_array(t_uint256)499_storage": {
+              "label": "uint256[499]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ABCTreasury": {
+        "src": "solidities\\ABCTreasury\\ABCTreasury.sol:17",
+        "version": {
+          "withMetadata": "caf730b548c85d2ceecd285a65508051578322288571068ba9f85a9101779538",
+          "withoutMetadata": "a69ca97fc4d80755eec58a3f5650524b74a81de9c6c4686a0d1e274e225c9b7e",
+          "linkedWithoutMetadata": "a69ca97fc4d80755eec58a3f5650524b74a81de9c6c4686a0d1e274e225c9b7e"
+        },
+        "inherit": [
+          "WithdrawFromEscrow",
+          "CollateralManagement",
+          "AdminRole",
+          "AccessControlUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ISendValueWithFallbackWithdraw": {
+        "src": "solidities\\ABCTreasury\\interfaces\\ISendValueWithFallbackWithdraw.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "withdraw()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "CollateralManagement": {
+        "src": "solidities\\ABCTreasury\\mixins\\CollateralManagement.sol:12",
+        "inherit": [
+          "AdminRole",
+          "AccessControlUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [
+          "()",
+          "withdrawFunds(address payable,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "CollateralManagement",
+              "label": "__gap",
+              "type": "t_array(t_uint256)1000_storage",
+              "src": "solidities\\ABCTreasury\\mixins\\CollateralManagement.sol:40"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)1000_storage": {
+              "label": "uint256[1000]"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "WithdrawFromEscrow": {
+        "src": "solidities\\ABCTreasury\\mixins\\WithdrawFromEscrow.sol:11",
+        "inherit": [
+          "AdminRole",
+          "AccessControlUpgradeable",
+          "ERC165Upgradeable",
+          "IERC165Upgradeable",
+          "IAccessControlUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "withdrawFromEscrow(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    }
+  ]
+}
