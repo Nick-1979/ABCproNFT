@@ -3,6 +3,7 @@
 Artists can put their arts as NFTs for sale in the ABC pro Gallery, without paying minting fee. Collectors on ABC pro can migrate their bought NFTs to other markets like OpenSea.
 
 ABC pro stands on three main components:
+
     Distributed storage
     Smart contracts
     A Market
