@@ -1,17 +1,23 @@
 # ABCpro Easy minting NFT Market
 
-In ABCpro, you can put your items for sale in the market, without paying minting fee. you can list, run an auction for your NFTs. Buyers even have the option to migrate their bought NFTs to other markets like OpenSea.
+Artists can put their arts as NFTs for sale in the ABC pro Gallery, without paying minting fee. Collectors on ABC pro can migrate their bought NFTs to other markets like OpenSea.
 
+ABC pro stands on three main components:
+    Distributed storage
+    Smart contracts
+    A Market
 
-I have tryied different distributed storage, but among them nft.storage on FILECOIN distributed infrastructure has the best performance and the lowest response time. Filecoin storage is used to keep NFT files and their metadata.
+Different distributed storage spaces have been tried, among them nft.storage has the best performance and shortest response time on the FILECOIN distributed infrastructure. Filecoin storage is used to store NFT files and their metadata.
 
-smartcontracts, which are upgradeable deployed on ethereum testnet Rinkeby, but can be run on any other solidity supported blockchains.
+Smart contracts, which are upgradeable are deployed on the ethereum testnet, Rinkeby, but can be run on any other solidity supported blockchains.
+
+The market, is written in javascript utilizing node.js and react.js frameworks, and Mongodb is used as the backend database.
 
 ![abcpro gallery screenshot](docs/images/ABCpro.png)
 
 # Setup
 
-Mongodb is used as backend database. it's name, user and password should be set in backend env file. The .env files for backend and frontend are self-explanatory and should be set with your keys (nft.storage key and alchemy key).
+Database name, user and password should be set in the backend .env file. The env files for backend and frontend are self-explanatory and should be set with your keys (nft.storage key and alchemy key).
 
 Install dependencies for both '/api' and '/client' folders:
 
