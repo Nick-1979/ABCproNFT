@@ -22,7 +22,7 @@ Database name, user and password should be set in the backend .env file. The env
 
 Install dependencies for both '/api' and '/client' folders:
 
-    npm install
+   yarn
 
 # Run
 
