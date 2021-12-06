@@ -1,6 +1,6 @@
-# ABCpro Easy minting NFT Market
+# ABCpro Easy minting NFT Market on Filecoin
 
-Artists can put their arts as NFTs for sale in the ABC pro Gallery, without paying minting fee. Collectors on ABC pro can migrate their bought NFTs to other markets like OpenSea.
+Artists can place their arts as NFTs for sale in the ABC pro Gallery, without paying minting fee. Collectors on ABC pro can migrate their purchased NFTs to other markets like OpenSea.
 
 ABC pro stands on three main components:
 
