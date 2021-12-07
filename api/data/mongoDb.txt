@@ -4,8 +4,8 @@ mongo
 use ABCproDB
 db.createUser(
   {
-    user: "abcPROUser20",
-    pwd: "2020AdminabcPRO400",
+    user: "youUserName",
+    pwd: "YourPassWord",
     roles: [ { role: "readWrite", db: "ABCproDB" },
             ]
   }
@@ -14,4 +14,4 @@ db.createUser(
 # if auth failed stop mongo and start again with auth disabled
 
 
-db.auth("abcPROUser20","2020AdminabcPRO400");
+db.auth("youUserName","YourPassWord");
