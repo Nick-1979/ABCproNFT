@@ -118,6 +118,7 @@ module.exports = {
    * @returns json response
    */
   async postData(path = "", data = {}) {
+    try{
     // Default options are marked with *
     const response = await fetch(API_SERVER + "/posts/" + path, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -137,6 +138,10 @@ module.exports = {
       return null;
     }
     return response.json(); // parses JSON response into native JavaScript objects
+  }catch(error){
+    console.log(' communication with server failed, reason:' + error);
+    return null;
+  }
   },
 
   getHighestBid(item) {
